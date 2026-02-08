@@ -12,3 +12,11 @@ def mask_account_card(account_card_number: str) -> str:
         message = masked_card_number
 
     return str(message)
+
+
+def get_date(date: str) -> str:
+    """Функция, которая меняет формат представления даты"""
+
+    date_formated = date[8:10] + "." + date[5:7] + "." + date[0:4]  # Используя срезы получаем результат
+
+    return date_formated
