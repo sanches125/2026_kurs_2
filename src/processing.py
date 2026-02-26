@@ -1,4 +1,4 @@
-def filter_by_state(list_of_dicts: list, state: str = "EXECUTED") -> list:
+def filter_by_state(list_of_dicts: list[dict], state: str = "EXECUTED") -> list[dict]:
     """Функция, которая фильтрующая данные из списка словарей по признаку состояния 'EXECUTED/CANCELED'"""
 
     filtered_dicts = []
@@ -8,7 +8,7 @@ def filter_by_state(list_of_dicts: list, state: str = "EXECUTED") -> list:
     return filtered_dicts
 
 
-def sort_by_date(list_of_dicts: list, sort_order_descending: bool = True) -> list:
+def sort_by_date(list_of_dicts: list[dict], sort_order_descending: bool = True) -> list[dict]:
     """Функция, которая делает сортировку в списке словарей по дате"""
 
     sorted_dicts = sorted(list_of_dicts, key=lambda income_dict: income_dict["date"], reverse=sort_order_descending)
